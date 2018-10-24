@@ -16,7 +16,7 @@ class IPAddresss:
 		str = self.ipdb.read(8)
 		(self.firstIndex, self.lastIndex) = struct.unpack('II', str)
 		self.indexCount = int((self.lastIndex - self.firstIndex) / 7 + 1)
-		# print self.getVersion(), u" 纪录总数: %d 条 "%(self.indexCount)
+		print self.getVersion(), u" 纪录总数: %d 条 " % (self.indexCount)
 
 	def getVersion(self):
 		s = self.getIpAddr(0xffffff00)
